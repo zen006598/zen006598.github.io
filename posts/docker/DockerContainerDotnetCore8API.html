@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Docker Container + Dotnet Core 8 API</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="Guide to emoji usage in Hugo" />
+    <meta name="keywords" content="blog,developer,personal" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Emoji Support" />
+    <meta name="twitter:description" content="Guide to emoji usage in Hugo" />
+
+    <meta property="og:title" content="Emoji Support" />
+    <meta property="og:description" content="Guide to emoji usage in Hugo" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="http://www.example.com/posts/emoji-support/"
+    />
+    <meta property="article:section" content="posts" />
+    <meta
+      property="article:published_time"
+      content="2023-07-07T00:00:00+00:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2023-07-07T00:00:00+00:00"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/markdown-syntax/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/rich-content/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/more-rich-content/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/math-typesetting/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/html-and-css-only-tabs/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/mermaid-support/"
+    />
+
+    <link rel="canonical" href="http://www.example.com/posts/emoji-support/" />
+
+    <link
+      rel="preload"
+      href="/fonts/forkawesome-webfont.woff2?v=1.2.0"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/coder.min.5adbe72fc41dcfb852215b84695288939b6b606db73238bd3ee936469572fc9c.css"
+      integrity="sha256-WtvnL8Qdz7hSIVuEaVKIk5trYG23Mji9Puk2RpVy/Jw="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css"
+      integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/favicon.svg"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="preload-transitions colorscheme-auto">
+    <div class="float-container">
+      <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <main class="wrapper">
+      <nav class="navigation">
+        <section class="container">
+          <a class="navigation-title" href="/"> JUNG WEI怕忘記放一下 </a>
+
+          <input type="checkbox" id="menu-toggle" />
+          <label class="menu-button float-right" for="menu-toggle">
+            <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+          </label>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+
+      <div class="content">
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">Docker Container + Dotnet Core 8 API 啟動</h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time> March 24, 2024</time>
+                  </span>
+                </div>
+
+                <div class="categories">
+                  <i class="fa fa-folder" aria-hidden="true"></i>
+                </div>
+              </div>
+            </header>
+
+            <div class="post-content">
+              <section>
+                <h2>本次操作使用版本 / 工具</h2>
+                <ul>
+                  <li>.Net Core 8 API</li>
+                  <li>SQL Service 2022</li>
+                  <li>.Net CLI</li>
+                  <li>VS Code</li>
+                  <li>Azure Data Studio</li>
+                  <li>Mac OS</li>
+                  <li>Docker Engine 24.0.2</li>
+                </ul>
+              </section>
+              <section>
+                <h2>實作步驟</h2>
+                <p>
+                  本次將會快速實作一個Docker為容器啟動.Net Core 8
+                  API專案環境，與使用Docker Compose 啟動SQL Service 2022。
+                </p>
+                <h3>Step 1 建立API專案</h3>
+                <p>打開終端機輸入以下指令，產生新專案</p>
+                <code>$ dotnet new webapi -n MssqlWithDocker</code>
+                <div class="notice example">
+                  <div class="notice-title">
+                    <i class="fa fa-file-text" aria-hidden="true"></i>Example
+                  </div>
+                  <div class="notice-content">
+                    <code>dotnet new</code>為.Net CLI產生.Net專案指令 <br />
+                    <code>webapi</code>為專案種類 <br />
+                    <code>-n MssqlWithDocker</code>專案命名MssqlWithDocker
+                    <br />
+                    <a target="_blank"
+                      href="https://learn.microsoft.com/zh-tw/dotnet/core/tools/dotnet-new"
+                      >完整指令參考
+                    </a>
+                  </div>
+                </div>
+                <p>進入專案</p>
+                <code>$ cd MssqlWithDocker</code>
+                <p>如果需要版控請自行輸入</p>
+                <code> git init </code> <br />
+                <code> git add . </code><br />
+                <code> git commit -m 'Init' </code>
+                <p>此時專案長這樣</p>
+                <image
+                  src="../images/dotnetWithDockerInitDir.png"
+                  width="400px"
+                ></image>
+                <div class="notice note">
+                  <div class="notice-title">
+                    <i class="fa fa-sticky-note" aria-hidden="true"></i>Note
+                  </div>
+                  <div class="notice-content">
+                    <code>.gitignore</code>使用Dotnet
+                    CLI建立專案時不會產生需要額外透過指令產生 <br />
+                    <code>dotnet new gitignore</code>
+                  </div>
+                </div>
+                <code>$ dotnet watch</code>
+                <p>確保server有跑起來</p>
+                <p>以上都沒問題前置作業就完成了，可以開始做Dockerfile</p>
+                <h3>Step 2 撰寫Dockerfile</h3>
+                <p>在根目創建Dockerfile</p>
+                <code>$ mkdir Dockerfile</code>
+                <pre><code class="lang-dockerfile">FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["mssqlWithDocker.csproj", "."]
+RUN dotnet restore "./mssqlWithDocker.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "mssqlWithDocker.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "mssqlWithDocker.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "mssqlWithDocker.dll"]</code></pre>
+                <p>此dockerfile為多階段建置image，包含以下步驟</p>
+                <ul>
+                  <li>
+                    以<code>mcr.microsoft.com/dotnet/aspnet:8.0</code> 作為<code
+                      >production</code
+                    >
+                    image，並以<code>/app</code>為作業目錄，docker
+                    container開放80 port
+                  </li>
+                  <li>
+                    以<code>mcr.microsoft.com/dotnet/sdk:8.0</code>作為<code
+                      >build stage</code
+                    >時的image，將<code>mssqlWithDocker.csproj</code>複製到<code>/src</code>，以<code>mssqlWithDocker.csproj</code>下載依賴，並將所有檔案複製到<code>/src</code>，定位估做位置到<code>/src</code>執行<code
+                      >dotnet build "mssqlWithDocker.csproj" -c Release -o
+                      /app/build</code
+                    >，把發行檔案輸出到<code>/app/build</code>
+                  </li>
+                  <li>
+                    開始<code>publish</code>此階段從<code>build</code>開始
+                  </li>
+                  <li>
+                    執行<code>dotnet publish</code
+                    >發布專案，輸出到<code>/app/publish</code>，<code>/p:UseAppHost=false</code>表示不生成獨立的應用主機
+                  </li>
+                  <li>
+                    開始<code>final</code>階段，由之前定義的<code>base</code>階段開始
+                  </li>
+                  <li>定位工作目錄為<code>/app</code></li>
+                  <li>
+                    從<code>publish</code>階段將編譯和發布的文件複製到<code
+                      >final</code
+                    >
+                    階段的工作目錄，代表在最終的container中，只包含運行應用程式的文件
+                  </li>
+                  <li>
+                    設定<code>enterpoint</code>當運行<code>dotent</code>指令
+                    執行<code>dotnet mssqlWithDocker.dll</code>
+                  </li>
+                </ul>
+                <h3>Step 3 建置Docker image</h3>
+                <p>執行<code>$ docker build -t web_api .</code></p>
+                <p>
+                  完成後可以透過<code>$ docker images ls</code
+                  >查看剛剛建制的image
+                </p>
+
+                <pre><code>REPOSITORY                             TAG           IMAGE ID       CREATED         SIZE
+webapi                                 latest        2ab24d0da259   About a minute ago      253MB</code></pre>
+
+                <h3>Step 4 建置Docker Compose啟動SQL Service</h3>
+                <p>
+                  在根目錄加入以下docker-compose.yml，該檔案表示Docker
+                  Compose啟動SQL Service與啟動API專案
+                </p>
+
+                <pre><code class="lang-dockerfile">version: "3.9"
+services:
+  webapi:
+    image: webapi
+    container_name: web_api_application
+    ports:
+      - "5001:80"
+  sql:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    platform: linux/amd64
+    container_name: sql_server2022
+    ports:
+      - "1433:1433" 
+    environment:
+      - ACCEPT_EULA=y
+      - SA_PASSWORD=A&VeryComplex123Password</code></pre>
+                <ul>
+                  <li>
+                    啟動的專案image為剛剛建的<code>webapi</code>，對應的port為本機5001映射container的80
+                  </li>
+                  <li>
+                    sql
+                    image為<code>mssql/server:2022-latest</code>，port為本機1433映射container的1433，將sql
+                    會使用到的參數加入container環境變數
+                  </li>
+                  <li>
+                    本次專案使用mac
+                    <code>mcr.microsoft.com/mssql/server:2022-latest</code
+                    >對arm64支援問題，所以特別指定環境為<code
+                      >platform: linux/amd64</code
+                    >
+                  </li>
+                </ul>
+                <h3>Step 5 容器 啟動</h3>
+                <p>
+                  執行<code>$ docker-compose up</code> 跑起來後執行<code
+                    >dotnet run</code
+                  >或是<code>dotnet watch</code>確保server有跑起來
+                </p>
+                <h3>Step 6 加入EF Core</h3>
+                <ol>
+                  <li>
+                    加入EF Core需要的套件<br />
+                    <code
+                      >$ dotnet add package Microsoft.EntityFrameworkCore</code
+                    ><br />
+                    <code
+                      >$ dotnet add package
+                      Microsoft.EntityFrameworkCore.SqlServer</code
+                    ><br />
+                    <code
+                      >$ dotnet add package
+                      Microsoft.EntityFrameworkCore.Tools</code
+                    ><br />
+                    <code
+                      >$ dotnet add package
+                      Microsoft.EntityFrameworkCore.Design</code
+                    >
+                  </li>
+                  <li>建立<code>ApplicationDbContext.cs</code><br />
+                    <pre><code class="lang-csharp">using Microsoft.EntityFrameworkCore;
+using mssqlWithDocker.Models;
+
+namespace mssqlWithDocker.Data;
+
+public class ApplicationDbContext : DbContext
+{
+
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    {
+    }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Order> Orders { get; set; }
+}
+
+                    </code></pre>
+                  </li>
+                  <li>
+                    在<code>appsettings.json</code>加入<code>connectionString</code>，ConnectionString不需要加入密碼，密碼透過<code>user-secrets</code>加入，在<code>Program.cs</code>中加入sql連線密碼
+                    <pre><code class="lang-json">"ConnectionStrings": {
+    "MssqlConnection": "Server=localhost, 1433;Database=mssqlWithDocker;User Id=SA;MultipleActiveResultSets=true;TrustServerCertificate=True;"
+  }
+</code></pre>
+                  </li>
+                  <li>
+                    <a
+                      href="https://learn.microsoft.com/zh-tw/aspnet/core/security/app-secrets?view=aspnetcore-8.0&tabs=linux#secret-manager"
+                    >
+                      使用秘密管理連接字串密碼 </a
+                    ><br />
+                    加入<code>user-secrets</code>使用以下指令
+                    <ol>
+                      <li>
+                        初始化user-secrets檔案<br />
+                        <code>$ dotnet user-secrets init</code>
+                      </li>
+                      初始後在<code>Program.cs</code>
+                      <li>
+                        加入密碼<br />
+                        <code
+                          >$ dotnet user-secrets set "MssqlConnection:Password"
+                          "A&VeryComplex123Password"</code
+                        >
+                      </li>
+                      <li>
+                        檢查有沒有確實加入<br />
+                        使用<code>$ dotnet user-secrets list</code><br />
+                        會出現<code
+                          >MssqlConnection:Password =
+                          A&VeryComplex123Password</code
+                        ><br />
+                        如果沒有出現表示沒有設定好
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a target="_blank"
+                      href="https://learn.microsoft.com/zh-tw/aspnet/core/security/app-secrets?view=aspnetcore-8.0&tabs=linux#string-replacement-with-secrets"
+                    >
+                      使用秘密取代字串
+                    </a>
+                    <br />
+                    把<a target="_blank" href="https://github.com/dotnet/efcore">EF Core</a>
+                    注入到<code>Program.cs</code>，並加入sql連接密碼
+                     <pre><code class="lang-csharp">var conStrBuilder = new SqlConnectionStringBuilder(builder.Configuration.GetConnectionString("MssqlConnection"))
+{
+    Password = builder.Configuration["MssqlConnection:Password"]
+};
+var mssqlConnection = conStrBuilder.ConnectionString;
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(mssqlConnection));</code></pre> 
+                  </li>
+                  <li>
+                    可以進行測試，加入Model與class，執行後續的<code>migration</code>確保table有建立就沒問題了
+                  </li>
+                </ol>
+              </section>
+              <div>
+                <a
+                  href="https://github.com/zen006598/mssqlWithDocker"
+                  target="_blank"
+                  >完整專案請參考</a
+                >
+              </div>
+              <section>
+                <h3>參考</h3>
+                <ul>
+                  <li>
+                    在 ASP.NET Core 的開發中安全儲存應用程式秘密:<br />
+                    <a
+                      target="_blank"
+                      href="https://learn.microsoft.com/zh-tw/aspnet/core/security/app-secrets?view=aspnetcore-8.0&tabs=linux#secret-manager"
+                    >
+                      https://learn.microsoft.com/zh-tw/aspnet/core/security/app-secrets?view=aspnetcore-8.0&tabs=linux#secret-manager
+                    </a>
+                  </li>
+                  <li>
+                    EF Core:
+                    <br />
+                    <a target="_blank" href="https://github.com/dotnet/efcore">
+                      https://github.com/dotnet/efcore
+                    </a>
+                  </li>
+                  <li>
+                    How to containerize your ASP.NET Core application and SQL
+                    Server with Docker: <br />
+                    <a target="_blank"
+                      href="https://www.twilio.com/en-us/blog/containerize-your-aspdotnet-core-application-and-sql-server-with-docker"
+                      >https://www.twilio.com/en-us/blog/containerize-your-aspdotnet-core-application-and-sql-server-with-docker</a
+                    >
+                  </li>
+                  <li>
+                    Connect and query SQL Server using SSMS: <br />
+                    <a target="_blank"
+                      href="https://learn.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-sql-server?view=sql-server-ver16"
+                    >
+                      https://learn.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-sql-server?view=sql-server-ver16
+                    </a>
+                  </li>
+                  <li>
+                    How to connect .NET Web API with SQL Server using Entity
+                    Framework: Code-First Approach: <br />
+                    <a target="_blank"
+                      href="https://medium.com/@vndpal/how-to-connect-net-web-api-with-sql-server-using-entity-framework-code-first-approach-8564192485c9"
+                    >
+                      https://medium.com/@vndpal/how-to-connect-net-web-api-with-sql-server-using-entity-framework-code-first-approach-8564192485c9
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <script
+      src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js"
+      integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-docker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-csharp.min.js"></script>
+  </body>
+</html>
