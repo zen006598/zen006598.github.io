@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>496. Next Greater Element I</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="Guide to emoji usage in Hugo" />
+    <meta name="keywords" content="blog,developer,personal" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Emoji Support" />
+    <meta name="twitter:description" content="Guide to emoji usage in Hugo" />
+
+    <meta property="og:title" content="Emoji Support" />
+    <meta property="og:description" content="Guide to emoji usage in Hugo" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="http://www.example.com/posts/emoji-support/"
+    />
+    <meta property="article:section" content="posts" />
+    <meta
+      property="article:published_time"
+      content="2023-07-07T00:00:00+00:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2023-07-07T00:00:00+00:00"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/markdown-syntax/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/rich-content/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/more-rich-content/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/math-typesetting/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/html-and-css-only-tabs/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/mermaid-support/"
+    />
+
+    <link rel="canonical" href="http://www.example.com/posts/emoji-support/" />
+
+    <link
+      rel="preload"
+      href="/fonts/forkawesome-webfont.woff2?v=1.2.0"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/coder.min.5adbe72fc41dcfb852215b84695288939b6b606db73238bd3ee936469572fc9c.css"
+      integrity="sha256-WtvnL8Qdz7hSIVuEaVKIk5trYG23Mji9Puk2RpVy/Jw="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css"
+      integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/favicon.svg"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="preload-transitions colorscheme-auto">
+    <div class="float-container">
+      <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <main class="wrapper">
+      <nav class="navigation">
+        <section class="container">
+          <a class="navigation-title" href="/"> JUNG WEI怕忘記放一下 </a>
+
+          <input type="checkbox" id="menu-toggle" />
+          <label class="menu-button float-right" for="menu-toggle">
+            <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+          </label>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+
+      <div class="content">
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a
+                    href="https://leetcode.com/problems/next-greater-element-i/description/"
+                  >
+                    496. Next Greater Element I
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time> March 24, 2024</time>
+                  </span>
+                </div>
+
+                <div class="categories">
+                  <i class="fa fa-folder" aria-hidden="true"></i>
+                </div>
+              </div>
+            </header>
+
+            <div class="post-content">
+              <section>
+                <h2>描述：</h2>
+                <p>
+                  The next greater element of some element <code>x</code> in an
+                  array is the first greater element that is to the right of
+                  <code>x</code> in the same array. You are given two distinct
+                  0-indexed integer arrays <code>nums1</code> and
+                  <code>nums2</code>, where <code>nums1</code> is a subset of
+                  <code>nums2</code>.
+                </p>
+                <p>
+                  For each<code> 0 <= i < nums1.length</code>, find the index
+                  <code>j</code> such that <code>nums1[i] == nums2[j]</code> and
+                  determine the next greater element of <code>nums2[j]</code> in
+                  <code>nums2</code>. If there is no next greater element, then
+                  the answer for this query is <code>-1</code>.
+                </p>
+                <p>
+                  Return an array <code>ans</code> of length
+                  <code>nums1.length</code> such that <code>ans[i]</code> is the
+                  next greater element as described above.
+                </p>
+                <p>
+                  傳入兩個沒有重複元素的陣列 <code>nums1</code> 和
+                  <code>nums2</code>。 找出 nums1 元素一定對應
+                  nums2元素。找出其右邊第一個更大的元素。
+                  如果不存在，則對應位置輸出 -1。
+                </p>
+                <p>
+                  右邊第一個更大的元素：對於 nums1 中的每個元素，需要在 nums2
+                  中找到這個元素所在位置的右側部分，尋找第一個比它大的元素。
+                </p>
+              </section>
+              <section>
+                <h2>範例：</h2>
+                <pre><code class="lang-css">Example 1:
+Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
+Output: [-1,3,-1]
+Explanation: The next greater element for each value of nums1 is as follows:
+- 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+- 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
+- 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+</code></pre>
+              </section>
+              <section>
+                <h3>第一次解：</h3>
+                <p>
+                  想法：迭代<code>nums1</code>，找到<code>num2</code>相對的位置，在以<code>nums2</code>相對位置的下一位開始做迭代，找出答案。
+                </p>
+                <ol>
+                  <li>init 結果陣列</li>
+                  <li>
+                    以nums1作為基準做迭代，找到<code>num2</code>相對的位置
+                  </li>
+                  <li>
+                    得到<code>nums2</code>後，以<code>num2</code>相對位置的下一位開始做迭代
+                  </li>
+                  <li>
+                    當迭代有比較大的數字就加入結果陣列，如果沒有加入<code
+                      >-1</code
+                    >
+                  </li>
+                </ol>
+                <pre><code class="lang-csharp">
+public class Solution {
+    public int[] NextGreaterElement(int[] nums1, int[] nums2) {
+        int[] result = new int[nums1.Length];
+        for (int i = 0; i < nums1.Length; i++) {
+            int currentIndexInNums2 = Array.IndexOf(nums2, nums1[i]);
+            int nextGreaterElement = -1;
+            for (int j = currentIndexInNums2 + 1; j < nums2.Length; j++) {
+                if (nums2[j] > nums1[i]) {
+                    nextGreaterElement = nums2[j];
+                    break;
+                }
+            }
+            result[i] = nextGreaterElement;
+        }
+        return result;
+    }
+}</code></pre>
+              </section>
+
+              <section>
+                <h3>第二次解</h3>
+                <p>使用<code>Dictionary</code>，<code>Stack</code>做處理;</p>
+                <ul>
+                  <li>
+                    <code>Dictionary</code>:用來儲存每個元素的右側下一個更大元素
+                  </li>
+                  <li>
+                    <code>Stack</code>儲存元素，使用<code>Stack</code>因為結構是先進後出，可以保持序列，在比較上也符合當前數字，比較右側數字
+                  </li>
+                  <li>當<code>Stack</code>的元素比迭代到的元素還要大時，就存進<code>Dictionary</code></li>
+                </ul>
+                <ol>
+                  <li>init <code>Dictionary</code>存放更大的元素，與<code>Stack</code>暫時儲存元素</li>
+                  <li>迭代<code>nums2</code>，當迭代到的元素比<code>Stack</code>的元素還要大時，就存進<code>Dictionary</code></li>
+                  <li>
+                    迭代會不斷地將<code>nums2</code>元素加進去，唯有迭代當前元素比<code>Stack</code>最上層(前一個加入)的元素還要大時，將<code>Stack</code>最上層(前一個加入)的元素移出，並存進<code>Dictionary</code>記錄右側下一個更大元素
+                  </li>
+                  <li>
+                    當<code>Stack</code>有元素就移出，並在<code>Dictionary</code>存<code>-1</code>
+                  </li>
+                  <li>把<code>Dictionary</code>的值放進<code>result</code></li>
+                </ol>
+                <pre class=""><code class="lang-csharp">public class Solution {
+    public int[] NextGreaterElement(int[] nums1, int[] nums2) {
+        Stack<int> stack = new Stack<int>();
+        Dictionary<int, int> nextGreater = new Dictionary<int, int>();
+        
+        foreach (int num in nums2) {
+            while (stack.Count > 0 && num > stack.Peek()) {
+                nextGreater[stack.Pop()] = num;
+            }
+            stack.Push(num);
+        }
+        
+        while (stack.Count > 0) {
+            nextGreater[stack.Pop()] = -1;
+        }
+        
+        int[] result = new int[nums1.Length];
+        for (int i = 0; i < nums1.Length; i++) {
+            result[i] = nextGreater[nums1[i]];
+        }
+        
+        return result;
+    }
+}</code></pre>
+        <p>圖解</p>
+<pre><code class="lang-csharp">foreach (int num in nums2) {
+  while (stack.Count > 0 && num > stack.Peek()) {
+      nextGreater[stack.Pop()] = num;
+  }
+  stack.Push(num);
+}
+</code></pre>
+<pre><code class="lang-csharp">num1 = [3,1,2]
+nums2 = [3,1,2,4]
+ans = [4,2,4]
+</code></pre>
+
+<pre><code>1.
+  num = 3
+  nextGreater = {}
+  stack = 
+          | |
+          | |
+          | |
+          |3|
+</code></pre>
+<pre><code>2.
+  num = 1
+  nextGreater = {}
+  stack = 
+          | |
+          | |
+          |1|
+          |3|
+</code></pre>
+<pre><code>3.
+  num = 2
+  nextGreater = {
+    1: 2,
+  }
+  stack = 
+          | |
+          | |
+          |2|
+          |3|
+進入while num為2比stack 頂端1還要大，1拋出，存進nextGreater中記錄右側更大元素
+</code></pre>
+<pre><code>4.
+  num = 4
+  nextGreater = {
+    1: 2,
+    2: 4
+  }
+  stack = 
+          | |
+          | |
+          |2|
+          |3|
+進入while num為4比stack 頂端2還要大，2拋出，存進nextGreater中記錄右側更大元素
+</code></pre>
+<pre><code>5.
+  num = 4
+  nextGreater = {
+    1: 2,
+    2: 4,
+    3: 4
+  }
+  stack = 
+          | |
+          | |
+          | |
+          |4|
+while中 num為4比stack 頂端3還要大，3拋出，存進nextGreater中記錄右側更大元素
+</code></pre>
+
+
+              </section>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <script
+      src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js"
+      integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="
+    ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+  </body>
+</html>
