@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>001. Two Sum</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="Guide to emoji usage in Hugo" />
+    <meta name="keywords" content="blog,developer,personal" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Emoji Support" />
+    <meta name="twitter:description" content="Guide to emoji usage in Hugo" />
+
+    <meta property="og:title" content="Emoji Support" />
+    <meta property="og:description" content="Guide to emoji usage in Hugo" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="http://www.example.com/posts/emoji-support/"
+    />
+    <meta property="article:section" content="posts" />
+    <meta
+      property="article:published_time"
+      content="2023-07-07T00:00:00+00:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2023-07-07T00:00:00+00:00"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/markdown-syntax/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/rich-content/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/more-rich-content/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/math-typesetting/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/html-and-css-only-tabs/"
+    />
+    <meta
+      property="og:see_also"
+      content="http://www.example.com/posts/mermaid-support/"
+    />
+
+    <link rel="canonical" href="http://www.example.com/posts/emoji-support/" />
+
+    <link
+      rel="preload"
+      href="/fonts/forkawesome-webfont.woff2?v=1.2.0"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/coder.min.5adbe72fc41dcfb852215b84695288939b6b606db73238bd3ee936469572fc9c.css"
+      integrity="sha256-WtvnL8Qdz7hSIVuEaVKIk5trYG23Mji9Puk2RpVy/Jw="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css"
+      integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8="
+      crossorigin="anonymous"
+      media="screen"
+    />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/favicon.svg"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-16x16.png"
+      sizes="16x16"
+    />
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="preload-transitions colorscheme-auto">
+    <div class="float-container">
+      <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <main class="wrapper">
+      <nav class="navigation">
+        <section class="container">
+          <a class="navigation-title" href="/"> JUNG WEI怕忘記放一下 </a>
+
+          <input type="checkbox" id="menu-toggle" />
+          <label class="menu-button float-right" for="menu-toggle">
+            <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+          </label>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+
+      <div class="content">
+        <section class="container post">
+          <article>
+            <header>
+              <div class="post-title">
+                <h1 class="title">
+                  <a href="https://leetcode.com/problems/two-sum/description/">
+                    001. Two Sum
+                  </a>
+                </h1>
+              </div>
+              <div class="post-meta">
+                <div class="date">
+                  <span class="posted-on">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <time> April 08, 2024</time>
+                  </span>
+                </div>
+
+                <div class="categories">
+                  <i class="fa fa-folder" aria-hidden="true"></i>
+                </div>
+              </div>
+            </header>
+
+            <div class="post-content">
+              <section>
+                <h2>描述：</h2>
+                <p>
+                  給一個整數<code>Array</code>
+                  <code>nums</code> 和一個整數目標值<code>target</code>
+                  target，傳回兩個數的<code>index</code>
+                  ，使得它們相加總和等於<code>target</code>。
+                </p>
+                <p>
+                  可以假設每個輸入只對應一種答案，不能重複利用陣列中同樣的元素。
+                </p>
+                <p>可以以任意順序 <code>return</code>答案。</p>
+              </section>
+              <section>
+                <h2>範例：</h2>
+                <pre><code class="lang-css">Example 1: 
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].</code></pre>
+                <pre><code class="lang-css">Example 2: 
+Input: nums = [3,2,4], target = 6
+Output: [1,2]</code></pre>
+              </section>
+              <section>
+                <p>
+                  解題想法：暴力解法，遍歷整個<code>Array</code>，計算每個數字與目標值的差值，找出與目標值相等的數字，回傳對應的index
+                </p>
+                <p>流程</p>
+                <ol>
+                  <li>
+                    迭代<code>nums</code> ，相加當下位置
+                    <code>i</code>與當下位置以後<code>j</code>
+                    每個數字直到相加總和等於<code>target</code>
+                  </li>
+                  <li>
+                    兩數相加，與目標值比較，若相等，回傳對應的
+                    <code>index</code>
+                  </li>
+                </ol>
+
+                <pre><code class="lang-csharp">
+public class Solution {
+   public int[] TwoSum(int[] nums, int target) {
+    for(int i = 0; i < nums.Length; i++) {
+        for(int j = i + 1; j < nums.Length; j++) {
+            if(nums[i] + nums[j] == target) {
+                return new int[] { i, j };
+            }
+        }
+    }
+    return new int[] { };
+  }
+}
+</code></pre>
+              </section>
+              <section>
+                <p>
+                  解題想法：使用<code>HashMap</code>記錄已經遍歷過的數字，以數字為<code>key</code>，<code>index</code>為<code
+                    >value，利用與目標值相減的結果，找出與目標值相等的數字回傳</code
+                  ><code>index</code>
+                </p>
+                <p>流程</p>
+                <ol>
+                  <li>
+                    init <code>Dictionary</code>作為記錄已經遍歷過的數字位置
+                  </li>
+                  <li>
+                    把遍歷過的數字加入<code>Dictionary</code>，數字為<code>key</code>，位置為<code>value</code>
+                  </li>
+                  <li>
+                    每次遍歷與<code>target</code> 相減，利用相減的結果比對出現過的值(<code>ContainsKey()</code>)，如果有相符的數字，取其<code>value</code>加入<code>Array</code>回傳。
+                  </li>
+                </ol>
+
+                <pre><code class="lang-csharp">
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+      Dictionary<int, int> map = new Dictionary<int, int>();
+
+      for(int i = 0; i < nums.Length; i++)
+      {
+        int j = target - nums[i];
+        if(map.ContainsKey(j))
+        {
+          return new int[]{map[j], i};
+        }
+        map[nums[i]] = i;
+      }
+
+      return new int[]{};
+    }
+}
+</code></pre>
+              </section>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <script
+      src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js"
+      integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="
+    ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+  </body>
+</html>
